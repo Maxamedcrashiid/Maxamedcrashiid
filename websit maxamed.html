@@ -1,0 +1,179 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/> <!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diiwaan Galin 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #007bff, #6610f2);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #336;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Diwaan Galinta ardayga</h3>
+        <p>
+        <form id="registerForm">
+            <div class="input-group">
+                <label>Magaca:</label>
+                <input type="text" id="magac" placeholder="Gali magacaaga..." required>
+                <div class="error" id="errorMagac">Fadlan gali magacaaga!</div>
+            </div>
+            <div class="input-group">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Gali email-kaaga..." required>
+                <div class="error" id="errorEmail">Email sax ah geli!</div>
+            </div>
+            <div class="input-group">
+                <label>Telefoon:</label>
+                <input type="tel" id="telefoon" placeholder="Gali lambarkaaga..." required>
+                <div class="error" id="errorTelefoon">Fadlan gali lambar sax ah!</div>
+            </div>
+            <button type="submit">Diiwaan Gali</button>
+        </form>
+        <div class="footer">© 2025 | falan iska hubi intaadan is dhiwan galin .</div>
+    </div>
+
+<video autoplay muted loop id="background-video">
+    <source src="videoaga.mp4" type="video/mp4">
+</video>
+
+<style>
+    #background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+</style>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Hel inputs-ka
+            let magac = document.getElementById("magac").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let telefoon = document.getElementById("telefoon").value.trim();
+
+            // Hel div-yada error-ka
+            let errorMagac = document.getElementById("errorMagac");
+            let errorEmail = document.getElementById("errorEmail");
+            let errorTelefoon = document.getElementById("errorTelefoon");
+
+            // Clear errors marka hore
+            errorMagac.style.display = "none";
+            errorEmail.style.display = "none";
+            errorTelefoon.style.display = "none";
+
+            let isValid = true;
+
+            // Xaqiiji magaca
+            if (magac === "") {
+                errorMagac.style.display = "blue";
+                isValid = false;
+            }
+
+            // Xaqiiji email
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                errorEmail.style.display = "block";
+                isValid = false;
+            }
+
+            // Xaqiiji telefoon
+            let telefoonRegex = /^[0-9]{7,15}$/;
+            if (!telefoonRegex.test(telefoon)) {
+                errorTelefoon.style.display = "block";
+                isValid = false;
+            }
+
+            // Hadii xogta sax tahay, soo bandhig fariin guul ah
+            if (isValid) {
+                alert("Diiwaan galintu waa guul! 🎉");
+                document.getElementById("registerForm").reset();
+            }
+        });
+    </script>
+</body>
+</html><style>body {
+    background: url('https://www.toptal.com/designers/subtlepatterns/uploads/dark_embroidery.png');
+}
+</style>
